@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Producto {
 
 
-    static Scanner scanner = new Scanner(System.in);
     private final String idProducto;
     private String nombreProducto;
     private double precioProducto;

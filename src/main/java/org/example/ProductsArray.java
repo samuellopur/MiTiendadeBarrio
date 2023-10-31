@@ -3,6 +3,7 @@ package org.example;
 import java.util.Arrays;
 
 public class ProductsArray {
+
     // Array cadenas llamado `products` con un tamaño de 20.
     static String[] products = new String[20];
 

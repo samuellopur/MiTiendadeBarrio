@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static org.example.Producto.scanner;
-
 public class Main {
-
+    static Scanner scanner = new Scanner(System.in);
     private static List<Producto> productos = new ArrayList<>();
-    Scanner eleccion = new Scanner(System.in);
+
 
     public static void main(String[] args) {
         correrMenu();
@@ -72,13 +70,15 @@ public class Main {
         System.out.println("\n±----------------------------------------±" +
                 "\nEliminar producto de inventario" +
                 "\n±----------------------------------------±");
-        System.out.println("Ingrese nombre o id del producto: ");
+        System.out.println("Ingrese id del producto: ");
         String nombreIdScanner = scanner.next();
 
         for (Producto producto : productos) {
             if (nombreIdScanner.equals(producto.getIdProducto())) {
                 productos.remove(producto);
+                System.out.println("Producto eliminado");
                 break;
+
             }
         }
     }
@@ -113,8 +113,8 @@ public class Main {
     }
 
 
-    public static void seleccionarOpcion(int eleccion) {
-        switch (eleccion) {
+    public static void seleccionarOpcion(int scanner) {
+        switch (scanner) {
             case 1 -> agregarProducto();
 
             case 2 -> elimiarProducto();
