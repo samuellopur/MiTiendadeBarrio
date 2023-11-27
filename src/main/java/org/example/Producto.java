@@ -1,26 +1,25 @@
 package org.example;
 
 import java.util.Date;
-import java.util.Scanner;
 
 public class Producto {
 
 
-    private final String idProducto;
+    private final String id;
     private String nombreProducto;
     private double precioProducto;
     static private Date fecha;
 
-    public Producto(String idProducto, String nombreProducto, double precioProducto) {
-        this.idProducto = idProducto;
+    public Producto(String id, String nombreProducto, double precioProducto) {
+        this.id = id;
         this.nombreProducto = nombreProducto;
         this.precioProducto = precioProducto;
         Producto.fecha = new Date();
     }
 
-    public String getIdProducto() {
+    public String getId() {
 
-        return idProducto;
+        return id;
     }
 
     public String getNombreProducto() {
@@ -54,7 +53,7 @@ public class Producto {
     @Override
     public String toString() {
         return "Producto { " +
-                "idProducto='" + idProducto + '\'' +
+                "id='" + id + '\'' +
                 ", nombreProducto='" + nombreProducto + '\'' +
                 ", precioProducto = " + precioProducto +
                 ", fecha = " + fecha +
