@@ -5,40 +5,41 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    static Scanner scanner = new Scanner(System.in);
-    private static List<Producto> productos = new ArrayList<>();
 
+    static Scanner scanner = new Scanner(System.in);
+    static List<Producto> productos = new ArrayList<>();
 
     public static void main(String[] args) {
-        correrMenu();
+
+       correrMenu();
     }
 
     public static void displayMenu() {
-
-        System.out.println(
-                """
-                        |o|                         /////////////\\\\\\
-                        |o|                        (((((((((((((   \\\\\\
-                        |o|                        ))) ~~      ~~   (((
-                        |o|                        ((( (*)     (*)  )))
-                        |o|                        )))     <        (((\s
-                        |o|                        ((( '\\______/`   )))\s
-                        |o|                        )))\\___________/(((\s
-                        |o|                        (((   _)  (_    )))\s\s
-                        |o|                              /\\__/\\""");
-        System.out.println("±----------------------------------------±");
-        System.out.println("|   Administrador Mi Tienda de Barrio    |");
-        System.out.println("±----------------------------------------±");
-        System.out.println("1. Agregar producto                      |");
-        System.out.println("2. Eliminar producto                     |");
-        System.out.println("3. Actualizar producto                   |");
-        System.out.println("4. Ver todos los productos               |");
-        System.out.println("5. Filtrar productos por precio          |");
-        System.out.println("6. Filtrar productos por categoria       |");
-        System.out.println("7. Generar reporte                       |");
-        System.out.println("8. Salir                                 |");
-        System.out.println("±----------------------------------------±");
-        System.out.print("\nDigita una opción entre 1 y 8:        =>  ");
+        String menu ="""
+                 |o|                         /////////////\\\\\\\\\\\\
+                 |o|                        (((((((((((((   \\\\\\\\\\\\
+                 |o|                        ))) ~~      ~~   (((
+                 |o|                        ((( (*)     (*)  )))
+                 |o|                        )))     <        (((\\s
+                 |o|                        ((( '\\\\______/`   )))\\s
+                 |o|                        )))\\\\___________/(((\\s
+                 |o|                        (((   _)  (_    )))\\s\\s
+                 |o|                              /\\\\__/\\\\""\"
+                 ±----------------------------------------±
+                 |   Administrador Mi Tienda de Barrio    |
+                 ±----------------------------------------±
+                 |  "1. Agregar producto                  |
+                 |  "2. Eliminar producto                 |
+                 |  "3. Actualizar producto               |
+                 |  "4. Ver todos los productos           |
+                 |  "5. Filtrar productos por precio      |
+                 |  "6. Filtrar productos por categoria   |
+                 |  "7. Generar reporte                   |
+                 |  "8. Salir                             |
+                 ±----------------------------------------±
+                 \nDigita una opción entre 1 y 8:      =>  
+                """;
+        System.out.println(menu);
     }
 
     public static void correrMenu() {
@@ -131,6 +132,5 @@ public class Main {
         }
 
     }
-
 
 }
